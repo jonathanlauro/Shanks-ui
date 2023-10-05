@@ -1,0 +1,226 @@
+$time-animation: 1s;
+
+.container {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  padding: 2rem;
+  gap: 25px;
+
+  &.darkMode {
+    background-color: #2f2f2f;
+    color: #ccc;
+
+    .tooltip {
+      background-color: #FEFEFE!important;
+      color: #2f2f2f!important;
+    }
+  }
+
+  &.lightMode {
+    background-color: #fff;
+  }
+
+  &.sm {
+    width: 30%;
+    height: fit-content;
+  }
+
+  &.md {
+    width: 50%;
+    height: fit-content;
+  }
+
+  &.lg {
+    width: 60%;
+    height: fit-content;
+  }
+
+  &.x-lg {
+    width: 80%;
+    height: fit-content;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    li {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+
+      .circle {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: blue;
+      }
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    border-bottom: #a4a3a3 solid 1px;
+    width: 90%;
+
+    .velas {
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+      gap: 5%;
+      align-items: end;
+      justify-content: space-between;
+      padding: 0 .5rem;
+
+      .vela {
+        width: 100%;
+        height: 0;
+        border-radius: 7px 7px 0 0;
+        transition: all .5s;
+
+        &.zero-pct{
+          height: 2%;
+          animation: up-dois $time-animation;
+        }
+        &.dez-pct{
+          height: 10%;
+          animation: up-dez $time-animation;
+        }
+        &.vinte-pct{
+          height: 20%;
+          animation: up-vinte $time-animation;
+        }
+        &.trinta-pct{
+          height: 30%;
+          animation: up-trinta $time-animation;
+        }
+        &.quarenta-pct{
+          height: 40%;
+          animation: up-quarenta $time-animation;
+        }
+        &.cinquenta-pct{
+          height: 50%;
+          animation: up-cinquenta $time-animation;
+        }
+        &.sessenta-pct{
+          height: 60%;
+          animation: up-sessenta $time-animation;
+        }
+        &.setenta-pct{
+          height: 70%;
+          animation: up-setenta $time-animation;
+        }
+        &.oitenta-pct{
+          height: 80%;
+          animation: up-oitenta $time-animation;
+        }
+        &.noventa-pct{
+          height: 90%;
+          animation: up-noventa $time-animation;
+        }
+        &.cem-pct{
+          height: 100%;
+          animation: up-cem $time-animation;
+        }
+
+
+      }
+
+    }
+  }
+}
+
+@keyframes up-dois {
+  from {
+    height: 0;
+  }
+  to {
+    height: 2%;
+  }
+}
+@keyframes up-dez {
+  from {
+    height: 0;
+  }
+  to {
+    height: 10%;
+  }
+}
+@keyframes up-vinte {
+  from {
+    height: 0;
+  }
+  to {
+    height: 20%;
+  }
+}
+@keyframes up-trinta {
+  from {
+    height: 0;
+  }
+  to {
+    height: 30%;
+  }
+}
+@keyframes up-quarenta {
+  from {
+    height: 0;
+  }
+  to {
+    height: 40%;
+  }
+}
+@keyframes up-cinquenta {
+  from {
+    height: 0;
+  }
+  to {
+    height: 50%;
+  }
+}
+@keyframes up-sessenta {
+  from {
+    height: 0;
+  }
+  to {
+    height: 60%;
+  }
+}
+@keyframes up-setenta {
+  from {
+    height: 0;
+  }
+  to {
+    height: 70%;
+  }
+}
+@keyframes up-oitenta {
+  from {
+    height: 0;
+  }
+  to {
+    height: 80%;
+  }
+}
+@keyframes up-noventa {
+  from {
+    height: 0;
+  }
+  to {
+    height: 90%;
+  }
+}
+@keyframes up-cem {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
