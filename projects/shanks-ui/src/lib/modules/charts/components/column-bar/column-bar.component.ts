@@ -12,8 +12,8 @@ export class ColumnBarComponent implements OnInit {
     @Input() size: 'sm' | 'md' | 'lg' | 'x-lg' = 'md';
     @Input() styleTheme: 'darkMode' | 'lightMode' = 'lightMode';
 
-    private maiorValor: number = 0;
-    private menorValor: number = 0;
+    public maiorValor: number = 0;
+    public menorValor: number = 0;
 
 
     ngOnInit(): void {
@@ -30,8 +30,7 @@ export class ColumnBarComponent implements OnInit {
     }
 
     private arredondar(numero: number) {
-        const dezenaMaisProxima = Math.round(numero / 10) * 10;
-        return dezenaMaisProxima;
+        return Math.round(numero / 10) * 10;
     }
 
     protected retornaHeightAnimado(valor: number) {
@@ -61,6 +60,25 @@ export class ColumnBarComponent implements OnInit {
             default:
                 return "zero-pct"
         }
+    }
+
+    public generateScaledArray(valorMinimo:number, valorMaximo: number) {
+        if (valorMaximo <= valorMinimo) {
+            throw new Error("O valor máximo deve ser maior que o valor mínimo.");
+        }
+
+        // Calcular o incremento com base na escala de 11 posições
+        const incremento = (valorMaximo - valorMinimo) / 10;
+
+        // Inicializar o array com 11 posições
+        const arrayResultante = [];
+
+        // Preencher o array com os valores escalonados
+        for (let i = 0; i < 11; i++) {
+            arrayResultante.push(valorMinimo + i * incremento);
+        }
+
+        return arrayResultante;
     }
 }
 

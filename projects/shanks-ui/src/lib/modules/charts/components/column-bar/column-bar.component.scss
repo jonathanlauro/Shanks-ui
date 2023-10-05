@@ -1,5 +1,6 @@
 $time-animation: 1s;
 
+
 .container {
   display: flex;
   flex-direction: row;
@@ -15,6 +16,10 @@ $time-animation: 1s;
       background-color: #FEFEFE!important;
       color: #2f2f2f!important;
     }
+
+    .divider {
+      border: rgba(255, 255, 255, 0.15) solid 1px!important;
+    }
   }
 
   &.lightMode {
@@ -24,21 +29,38 @@ $time-animation: 1s;
   &.sm {
     width: 30%;
     height: fit-content;
+
+    .divider {
+      width: 18%;
+    }
+
   }
 
   &.md {
     width: 50%;
     height: fit-content;
+
+    .divider {
+      width: 36.5%;
+    }
   }
 
   &.lg {
     width: 60%;
     height: fit-content;
+
+    .divider {
+      width: 46%;
+    }
   }
 
   &.x-lg {
     width: 80%;
     height: fit-content;
+
+    .divider {
+      width: 65.5%;
+    }
   }
 
   .info {
@@ -77,6 +99,31 @@ $time-animation: 1s;
       align-items: end;
       justify-content: space-between;
       padding: 0 .5rem;
+
+      .linhas {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        .linha {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          .value {
+            display: inline-block;
+            width: 15px;
+          }
+
+          .divider {
+            position: absolute;
+            margin-left: 15px;
+            border: #00000026 solid 1px;
+            z-index: 0;
+          }
+        }
+      }
 
       .vela {
         width: 100%;
