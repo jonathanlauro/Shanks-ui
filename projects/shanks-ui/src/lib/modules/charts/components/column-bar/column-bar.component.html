@@ -10,11 +10,14 @@
     <div class="content">
         <div class="velas">
             <div class="linhas">
+                <div class="linha">
+                    <div class="value">0</div>
+                    <div class="divider"></div>
+                </div>
                 <div class="linha" *ngFor="let valor of generateScaledArray(menorValor,maiorValor)">
                     <div class="value">{{ valor }}</div>
                     <div class="divider"></div>
                 </div>
-
             </div>
             <div class="vela" [tooltip]="data.title+ ': ' +data.value" *ngFor="let data of data"
                  [ngClass]="retornaHeightAnimado(calcularPorcentagem(data.value))"
